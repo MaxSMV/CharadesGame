@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Actor Page</title>
+</head>
+<body>
+<div class="container">
+    <h1>Hello, Actor</h1>
+    {% if not game.guesser_username %}
+        <p>Waiting for Guesser to join...</p>
+    {% elif not game.is_active %}
+        <form method="post" action="/start_game">
+            <button type="submit" class="btn btn-primary">Start Game</button>
+        </form>
+    {% else %}
+        <form method="post" action="/select_word">
+            <!-- ... your word selection form ... -->
+        </form>
+    {% endif %}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
