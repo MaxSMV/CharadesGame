@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,20 +42,20 @@
             margin-top: 2em;
             border: none;
             border-radius: 4px;
-            background-color: #5cb85c;
+            background-color: #337ab7;
             color: white;
             font-size: 1em;
             cursor: pointer;
             box-sizing: border-box;
         }
         input[type="submit"]:hover {
-            background-color: #4cae4c;
+            background-color: #286090;
         }
         p {
             text-align: center;
         }
         a {
-            color: #5cb85c;
+            color: #337ab7;
             text-decoration: none;
         }
         a:hover {
@@ -64,15 +64,15 @@
     </style>
 </head>
 <body>
-    <form action="{{ url_for('login') }}" method="post">
-        <h1>Вхід в систему</h1>
+    <form action="{{ url_for('register') }}" method="post">
+        <h1>Реєстрація</h1>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
-        <input type="submit" value="Login">
-        <p>Не маєте акаунта?</p>
-        <p><a href="{{ url_for('register') }}">Зареєструватися тут</a></p>
+        <input type="submit" value="Register">
+        <p>Вже маєте акаунт?</p>
+        <p><a href="{{ url_for('login') }}">Увійдіть тут</a></p>
     </form>
 </body>
 </html>
