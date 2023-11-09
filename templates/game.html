@@ -4,34 +4,59 @@
     <meta charset="UTF-8">
     <title>Game Page</title>
     <style>
-        /* Add some basic styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: #fff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
             text-align: center;
-            padding: 50px;
+            color: #333;
         }
-
-        #logout-link {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 20px;
-            background-color: #3498db;
+        label {
+            display: block;
+            margin-top: 1em;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 1em;
+            margin-top: 2em;
+            border: none;
+            border-radius: 4px;
+            background-color: #c21322;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        #logout-link:hover {
-            background-color: #2874a6;
+            font-size: 1em;
             cursor: pointer;
+            box-sizing: border-box;
+        }
+        input[type="submit"]:hover {
+            background-color: #b3323d;
         }
     </style>
 </head>
 <body>
     <form action="{{ url_for('logout') }}" method="post">
-        <input type="submit" value="Logout">
+        <h1>Гра!</h1>
+        <input type="submit" value="Вихід">
     </form>
 </body>
 </html>
